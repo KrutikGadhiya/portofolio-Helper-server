@@ -12,6 +12,12 @@ const projectSchema = mongoose.Schema({
   },
   projectLink: {
     type: String
+  },
+  githubLink: {
+    type: String
+  },
+  technologies: {
+    type: []
   }
 });
 

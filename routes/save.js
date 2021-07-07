@@ -8,13 +8,17 @@ router.post('/save', (req, res) => {
     projectName,
     projectDescription,
     projectImage,
-    projectLink } = req.body;
+    projectLink,
+    githubLink,
+    technologies } = req.body;
 
   const proj = new project({
     projectName,
     projectDescription,
     projectImage,
-    projectLink
+    projectLink,
+    githubLink,
+    technologies
   })
 
   proj.save()
