@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config()
 
-const MONGODBURI = 'mongodb+srv://KK:krutik@cluster0.cxrlz.mongodb.net/Portofolio?retryWrites=true&w=majority';
+const MONGODBURI = process.env.MONGODB_URI;
 
 const client = mongoose.connect(MONGODBURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
