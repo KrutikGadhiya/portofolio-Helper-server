@@ -13,7 +13,7 @@ app.use(require('./routes/save'));
 app.use(require('./routes/getProject'))
 
 app.get('/', (req, res) => {
-  res.json();
+  res.json({ message: "server Up and running" });
 })
 
 app.listen(PORT, () => {
