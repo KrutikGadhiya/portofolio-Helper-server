@@ -4,7 +4,7 @@ const topModel = require('../models/top')
 
 router.get('/top', async (req, res) => {
   try {
-    const result = await topModel.find()
+    const result = await topModel.find().populate('project')
     res.json(result)
   }
   catch (err) {
