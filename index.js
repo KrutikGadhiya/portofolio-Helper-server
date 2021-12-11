@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 // routes
 app.use(require('./routes/save'));
 app.use(require('./routes/getProject'))
+app.use(require('./routes/topProject'))
 
 app.get('/', (req, res) => {
   res.json({ message: "server Up and running" });
